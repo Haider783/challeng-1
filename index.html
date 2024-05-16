@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign-Up Page</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .main-container {
+            display: flex;
+            width: 800px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .illustration {
+            background-color: #e6f7e9;
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .illustration img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .signup-container {
+            background-color: #fff;
+            padding: 40px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .signup-container h2 {
+            margin-bottom: 20px;
+            font-size: 24px;
+            color: #333;
+        }
+
+        .signup-container input[type="text"],
+        .signup-container input[type="email"],
+        .signup-container input[type="password"] {
+            width: calc(100% - 20px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+
+        .signup-container button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 10px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: calc(100% - 20px);
+            font-size: 16px;
+        }
+
+        .signup-container button:hover {
+            background-color: #45a049;
+        }
+
+        .signup-container .social-signup {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+        }
+
+        .signup-container .social-signup img,
+        .signup-container .social-signup svg {
+            width: 30px;
+            margin: 0 10px;
+            cursor: pointer;
+            height: 30px;
+        }
+
+        .signup-container .login-link {
+            margin-top: 20px;
+            display: block;
+            color: #666;
+            text-decoration: none;
+        }
+
+        .signup-container .login-link:hover {
+            text-decoration: underline;
+        }
+
+        .logo-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .logo-container img {
+            height: 30px;
+            margin-right: 10px;
+        }
+
+        .logo-container h1 {
+            font-size: 24px;
+            margin: 0;
+            color: #333;
+        }
+
+        @media (max-width: 768px) {
+            .main-container {
+                flex-direction: column;
+                width: 90%;
+            }
+
+            .illustration,
+            .signup-container {
+                flex: none;
+                width: 100%;
+            }
+
+            .signup-container {
+                padding: 20px;
+            }
+
+            .signup-container h2 {
+                font-size: 20px;
+            }
+
+            .signup-container input[type="text"],
+            .signup-container input[type="email"],
+            .signup-container input[type="password"],
+            .signup-container button {
+                width: calc(100% - 20px);
+            }
+        }
+
+        @media (max-width: 480px) {
+            .signup-container h2 {
+                font-size: 18px;
+            }
+
+            .signup-container input[type="text"],
+            .signup-container input[type="email"],
+            .signup-container input[type="password"],
+            .signup-container button {
+                font-size: 14px;
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <div class="illustration">
+            <img src="Image.png" alt="Illustration">
+        </div>
+        <div class="signup-container">
+            <div class="logo-container">
+                <img src="leaf.png"
+                    alt="Leaf">
+                <h1>Leaf</h1>
+            </div>
+            <h2>Create Account</h2>
+            <form>
+                <input type="text" name="full_name" placeholder="Enter Full Name" required>
+                <input type="email" name="email" placeholder="Enter Your Email" required>
+                <input type="password" name="password" placeholder="Enter Your Password" required>
+                <button type="submit">Sign-Up</button>
+            </form>
+            <div class="social-signup">
+                <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <rect x="0.735156" y="0.7" width="30.6" height="30.6" rx="15.3" stroke="black" stroke-opacity="0.2"
+                        stroke-width="0.6" />
+                    <g opacity="0.9" clip-path="url(#clip0_1_965)">
+                        <path
+                            d="M16.0349 14.3636V17.8491H20.8785C20.6658 18.97 20.0276 19.9191 19.0703 20.5573L21.9912 22.8237C23.693 21.2528 24.6749 18.9455 24.6749 16.2046C24.6749 15.5665 24.6176 14.9528 24.5112 14.3637L16.0349 14.3636Z"
+                            fill="#4285F4" />
+                        <path
+                            d="M10.9911 17.713L10.3323 18.2173L8.00049 20.0336C9.48139 22.9709 12.5166 25 16.0348 25C18.4647 25 20.502 24.1982 21.9911 22.8237L19.0702 20.5573C18.2684 21.0973 17.2456 21.4246 16.0348 21.4246C13.6948 21.4246 11.7067 19.8455 10.9948 17.7182L10.9911 17.713Z"
+                            fill="#34A853" />
+                        <path
+                            d="M8.00054 11.9663C7.38694 13.1772 7.03516 14.5436 7.03516 15.9999C7.03516 17.4562 7.38694 18.8226 8.00054 20.0335C8.00054 20.0416 10.9951 17.7098 10.9951 17.7098C10.8151 17.1698 10.7087 16.5971 10.7087 15.9998C10.7087 15.4024 10.8151 14.8298 10.9951 14.2898L8.00054 11.9663Z"
+                            fill="#FBBC05" />
+                        <path
+                            d="M16.035 10.5836C17.3604 10.5836 18.5386 11.0418 19.4795 11.9255L22.0568 9.34821C20.494 7.89187 18.465 7 16.035 7C12.5168 7 9.48139 9.02091 8.00049 11.9664L10.995 14.29C11.7068 12.1627 13.695 10.5836 16.035 10.5836Z"
+                            fill="#EA4335" />
+                    </g>
+                    <defs>
+                        <clipPath id="clip0_1_965">
+                            <rect width="18" height="18" fill="white" transform="translate(7.03516 7)" />
+                        </clipPath>
+                    </defs>
+                </svg>
+                <img src="facebook.png" alt="Facebook">
+                <img src="apple.png" alt="Apple">
+            </div>
+            <a href="#" class="login-link">Already have an account? Login</a>
+        </div>
+    </div>
+</body>
+
+</html>
